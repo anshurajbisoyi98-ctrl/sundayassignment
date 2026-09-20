@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "start": "node server.js",
+    "start": "bash start.sh",
     "render-build": "npm install && npm run build"
   },
   "dependencies": {
