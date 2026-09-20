@@ -99,7 +99,7 @@ PORT=10000
    Name: ewaste-frontend
    Root Directory: frontend
    Branch: main
-   Build Command: npm install && npm run build
+   Build Command: npm run render-build
    Start Command: npm start
    Instance Type: Free
    ```
