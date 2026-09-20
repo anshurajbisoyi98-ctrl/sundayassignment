@@ -24,19 +24,20 @@ FRONTEND_URL=https://your-frontend-url.onrender.com
 
 ---
 
-### Frontend (Static Site)
+### Frontend (Web Service)
 
-**Service Type:** Static Site
+**Service Type:** Web Service
 
 | Setting | Value |
 |---------|-------|
 | **Root Directory** | `frontend` |
 | **Build Command** | `npm install && npm run build` |
-| **Publish Directory** | `dist` |
+| **Start Command** | `npm start` |
 
 **Environment Variables:**
 ```
 VITE_API_URL=https://your-backend-url.onrender.com
+PORT=10000
 ```
 
 ---
@@ -89,27 +90,30 @@ VITE_API_URL=https://your-backend-url.onrender.com
 
 ### 2️⃣ Deploy Frontend
 
-1. **Create Static Site**
-   - Click **"New +"** → **"Static Site"**
+1. **Create Web Service**
+   - Click **"New +"** → **"Web Service"**
    - Select same repository
 
-2. **Configure Static Site**
+2. **Configure Web Service**
    ```
    Name: ewaste-frontend
    Root Directory: frontend
    Branch: main
    Build Command: npm install && npm run build
-   Publish Directory: dist
+   Start Command: npm start
+   Instance Type: Free
    ```
 
-3. **Add Environment Variable**
+3. **Add Environment Variables**
    - Click **"Environment"** tab
-   - Add: `VITE_API_URL` = `https://ewaste-backend-xxxx.onrender.com`
-     (Use the backend URL from step 1)
+   - Add:
+     - `VITE_API_URL` = `https://ewaste-backend-xxxx.onrender.com`
+       (Use the backend URL from step 1)
+     - `PORT` = `10000`
 
 4. **Deploy**
-   - Click **"Create Static Site"**
-   - Wait 2-3 minutes for build
+   - Click **"Create Web Service"**
+   - Wait 3-5 minutes for build and deployment
 
 5. **Update Backend CORS**
    - Go back to backend service
